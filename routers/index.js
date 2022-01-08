@@ -40,6 +40,7 @@ indexRouter.get('/:username', (req, res) => {
         if(err){
             console.error(err)
             res.status(500).json({error: err})
+            console.log(`Something went wrong trying to findOne for ${req.params.username} in clients`)
         } else {
             // console.log(client)
             res.json(client)
