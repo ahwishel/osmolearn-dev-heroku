@@ -35,6 +35,7 @@ mongoose.connect(dbURI).then(() => {
 }).catch(e => {
     console.error(e)
     console.log(e)
+    console.log("DB CONNECTION FAILED MAN")
 })
 
 console.log(process.env.PORT)
