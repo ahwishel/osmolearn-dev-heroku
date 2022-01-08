@@ -1,0 +1,26 @@
+{
+  "name": "osmolearn",
+  "version": "1.0.0",
+  "description": "An online tutoring app that allows anyone with something to teach to do so",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "tutoring",
+    "online-tutoring"
+  ],
+  "author": "Abdallah Hwishel",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15",
+    "peer": "^0.6.1",
+    "socket.io": "^4.4.0",
+    "uuid": "^8.3.2"
+  }
+}
