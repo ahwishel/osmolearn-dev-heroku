@@ -37,6 +37,8 @@ mongoose.connect(dbURI).then(() => {
     console.log(e)
 })
 
+console.log(process.env.PORT)
+
 httpServer.listen(process.env.PORT || 5000, ()=> {
     console.log("Server is live on port 5000")
     ioServer.listen(5001, () => {
