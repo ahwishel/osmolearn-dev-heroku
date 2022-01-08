@@ -42,7 +42,7 @@ console.log(process.env.PORT)
 
 httpServer.listen(process.env.PORT || 5000, ()=> {
     console.log("Server is live on port 5000")
-    ioServer.listen(Number(process.env.PORT), () => {
+    ioServer.listen(Number(process.env.PORT) || 5001, () => {
         console.log(`IO server is ready on port ${process.env.PORT}`)
     })
     const peerServer = new PeerServer({path: '/callpeer'})
