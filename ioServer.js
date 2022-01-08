@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 let ioServer = http.createServer(app)
-const {Server} = require('ws')
+const {Server} = require('socket.io')
 const io = new Server(ioServer, {cors: {
     origin: '*',
     methods: ['GET', 'POST'],
