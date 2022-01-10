@@ -111,11 +111,13 @@ io.on('connection', socket => {
         })
     })
     socket.on('draw', ({sessionId, canvasPaths}) => {
-        rooms[sessionId].participants.forEach(participant => {
-            if(participant.socketId !== socket.id){
-                socket.to(participant.socketId).emit('draw', canvasPaths)
-            }
-        })
+        if(canvasPaths.paths.length > 1){ //The first point is sent twice so this is to limit it.
+            rooms[sessionId].participants.forEach(participant => {
+                if(participant.socketId !== socket.id){
+                    socket.to(participant.socketId).emit('draw', canvasPaths)
+                }
+            })
+        }
     })
 
     socket.on('undo', ({sessionId}) => {
